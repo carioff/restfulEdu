@@ -90,3 +90,12 @@ mvnw maven wrapper: 윈도우에서 실행할때
 
 
 #### > SpringMVC
+#### > OpenAPI
+프로그래밍에서 사용할 수 있는 개방되어 있는 상태의 인터페이스
+
+#### > REST(REpresentational Safe Transfer)란
+HTTP URI + HTTP Method
+Post: Create
+Get: Read
+Put: Update or Create
+Delete: Delete
