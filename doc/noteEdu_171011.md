@@ -102,3 +102,23 @@ Delete: Delete
 
 ##### > 기존 방식과 비교
 GET/ list.do?no=510&name=java VS GET/bbs/java/510
+
+/users GET POST
+/users{userId} GET PUT DELETE
+계층적 구조라 JAVA객체와 매칭이 잘 됨
+
+@RequestBody: HTTP RequestBody를 Java객체로 전달 받겠다.
+@ResponseBody: Java 객체를 ResponseBody로 전송할 수 있다.
+
+#### > MVC 패턴의 개념
+*Model: 애플리케이션 정보(Data, Business Logic 포함) ==> 핵심*
+안타깝게도 Java(Eclipse)에서는 자동 생성기능이 없다. 
+
+View: Presentation Logic
+Controller: Model View 사이 상호작용 관리
+
+#### > Front Controller 아키텍쳐
+FrontController - Controller - Service - Persistence - DB
+Presentation - Business - DataAccess
+
+
