@@ -122,4 +122,27 @@ FrontController - Controller - Service - Persistence - DB
 
 Presentation - Business - DataAccess
 
+@Component
+|||
+@Controller(Presentation) - @Service - @Repository(Persistence/DAO)
+
+#### > DAO 작명
+table명과 같이 가는 경우가 많다.
+
+### > 회원관리 기능 설계
+#### 1. URI 설계
+GET /users/200 200번 회원조회
+
+#### 2. 기능
+- 회원조회 by 회원번호
+
+#### 3. Model 
+User
+int userId
+String name
+String email
+String hpNum
+
+### > rest client Postman
+https://velopert.com/362
 
