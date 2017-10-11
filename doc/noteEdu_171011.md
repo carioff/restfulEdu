@@ -99,3 +99,6 @@ Post: Create
 Get: Read
 Put: Update or Create
 Delete: Delete
+
+##### > 기존 방식과 비교
+GET/ list.do?no=510&name=java VS GET/bbs/java/510
