@@ -1,5 +1,4 @@
-171011
-restful 기본
+#171011 restful
 
 mime
 
@@ -64,7 +63,13 @@ Convention over Configuration 을 따름
 톰캣이 내장되어 단독으로 실행 가능
 설정을 최대한 줄이고 XML 설정파일 필요 없음
 
+Spring Starter Project로 프로젝트 생성
 
+Jar: 톰캣 내장<->War: 다른 was에 로딩 
+Kotlin <-> Java 1:1 변환 가능
 
+SpringBoot 세팅
+Core> devtools
+Web> web
 
-
+mvnw maven wrapper: 윈도우에서 실행할때 
