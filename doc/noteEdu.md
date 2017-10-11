@@ -58,4 +58,13 @@ Maven
 Maven Repository에 업로드함으로써 자동 추가 가능
 프로젝트 자동 구성
 
+스프링부트 - 차세대 스프링 프레임워크
+스프링기반 product-ready 어플개발
+Convention over Configuration 을 따름
+톰캣이 내장되어 단독으로 실행 가능
+설정을 최대한 줄이고 XML 설정파일 필요 없음
+
+
+
+
 
