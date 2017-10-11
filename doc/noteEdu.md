@@ -73,3 +73,20 @@ Core> devtools
 Web> web
 
 mvnw maven wrapper: 윈도우에서 실행할때 
+
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+		starter 는 종합 툴킷
+		
+@RestController 
+글자 그대로 화면에 호출
+
+@Controller는 return 관련 폴더로 링크		
+메소드에 @ResponseBody 로 어노테이션이 되어 있다면 메소드에서 리턴되는 값은 View 를 통해서 
+출력되지 않고 HTTP Response Body 에 직접 쓰여지게 됩니다.
+이때 쓰여지기 전에 리턴되는 데이터 타입에 따라 MessageConverter 에서 변환이 이뤄진 후 쓰여지게 됩니다.
+
+
+# > SpringMVC
