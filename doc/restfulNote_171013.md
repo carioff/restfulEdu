@@ -45,3 +45,21 @@ DAO에서 restTemplate 호출로 RESTful 데이터를 연동
 ### > HTTP Client 모듈 
 REST Client 이전 (스프링 사용 이전)
 안드로이드는 Ok Client 사용
+
+
+### > API 설계 유의점
+1. /를 이용하여 계층구조를 표현
+2. /는 URI 마지막에 붙이지 않음
+3. 하이픈은 가독성을 높이지만 언더라인은 사용하지 않음 
+http://www.abe.com/big-text/book1.html (o)
+4. 문자열은 소문자를 사용하고 확장자는 사용하지 않음
+5. 도큐먼트 이름은 단수를 사용한다.
+6. 컬렉션은 복수를 사용한다.
+7. 스토어의 이름은 동사를 사용한다.
+8. 경로상의 변화되는 부분은 유일한 값을 사용한다.
+http://api.abc.com/categories/{categoryId}/books/{bookId}
+9. CRUD 기능은 URI에 사용하지 않는다.
+10. 컬렉션이나 스토어의 결과를 페이징하여 사용
+GET /users GET /users?role=admin
+GET /users?pageSize=25&pageStartIndex=50
+
