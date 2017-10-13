@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import kr.re.kitri.hello.model.User;
 import kr.re.kitri.hello.service.ManageUsersService;
+import kr.re.kitri.hello.util.ApiResponse;
+import kr.re.kitri.hello.util.ApiResponse.Status;
+import kr.re.kitri.hello.util.ListApiResponse;
 
 @RestController// Rest방식으로 객체 반환이 가능 
 //@Controller
@@ -29,19 +32,32 @@ public class ManageUsersController {
 	}
 	
 	@GetMapping("/users") // http://lacalhost:8090/articles
-	public List<User> viewAllUsers() {
-		List<User> userList = new ArrayList<>();
+//	public List<User> viewAllUsers() {
+	public ListApiResponse viewAllUsers() {
+		List<Object> userList = new ArrayList<>();
 		userList.add(new User(251, "개", "3@2.com", "010-1112-1113"));
 		userList.add(new User(252, "말", "2@2.com", "010-1312-1113"));
 		userList.add(new User(253, "너", "4@2.com", "010-2123-1113"));
-		return userList;
-		
+		System.out.println("userList.size(): " + userList.size());
+//		return userList;
+		ListApiResponse listRes;
+		if(userList.size() < 1) {
+			listRes = new ListApiResponse(Status.ERROR, null, new ApiResponse.ApiError(404, "not found"), 0, null, 0);
+		} else {
+			listRes = new ListApiResponse(Status.OK, userList, null, 1, "", userList.size());
+		}
+
+		return listRes;
 	}
 
 	
 	@PostMapping("/users") // owe to Jackson
-	public User registerUser() {
-		return new User(250, "순실", "1@1com", "010-1111-1111");
+	public ApiResponse registerUser() {
+		User user =  new User(250, "순실", "1@1com", "010-1111-1111");
+		
+		ApiResponse res = new ApiResponse(Status.ERROR, null, new ApiResponse.ApiError(404, "not found"));
+		
+		return res;
 
 	}
 	

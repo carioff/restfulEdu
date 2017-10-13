@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="parkDAO">
+	<insert id="insertPark" parameterType="kr.re.kitri.park.model.Park">
+		INSERT INTO park(park_id, name, alias, city, state, country)
+		VALUES(#{parkId}, #{name}, #{alias}, #{city}, #{state}, #{country});
+	</insert>
+	
+	<select id="selectParkByParkKey" 
+			parameterType="java.lang.String" 
+			resultType="kr.re.kitri.park.model.Park">
+		SELECT park_id AS parkId, name, alias, city, state, country
+		FROM park
+		WHERE park_id = #{parkId}
+	</select>
+	
+</mapper>
