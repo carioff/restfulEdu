@@ -30,6 +30,10 @@ public class ApiResponse {
     private final Object data;
     private final ApiError error;
 
+    public ApiResponse() {
+    	this(null, null, null);
+    }
+    
     public ApiResponse(Status status, Object data) {
         this(status, data, null);
     }

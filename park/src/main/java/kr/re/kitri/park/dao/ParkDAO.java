@@ -1,6 +1,7 @@
 package kr.re.kitri.park.dao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,14 @@ public class ParkDAO {
 		sqlSessionTemplate.getConnection();
 	}
 	
+	/**
+	 * 전체 불러오기
+	 * @return
+	 */
+	public List<Park> selectParks() {
+		return sqlSessionTemplate.selectList("parkDAO.selectParks");
+	}
+	
 	public void insertPark(Park park) throws SQLException {
 //		Connection conn = dataSource.getConnection();
 //		conn.close();
@@ -33,5 +42,19 @@ public class ParkDAO {
 
 	public Park selectParkByParkKey(String parkId) {
 		return sqlSessionTemplate.selectOne("parkDAO.selectParkByParkKey", parkId);
+	}
+
+	public List<Park> selectParks(int pageNum) {
+		pageNum = (pageNum - 1) * 10;
+		return sqlSessionTemplate.selectList("parkDAO.selectParks", pageNum);
+	}
+
+	public String selectCount() {
+//		try {
+			return sqlSessionTemplate.selectOne("parkDAO.selectCount");
+//		} catch (Exception e){
+//			throw new ClientException(150, "커넥션 불가.");
+//		}
+		
 	}
 }

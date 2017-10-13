@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,16 @@ public class ManageUsersController {
 	@Autowired
 	private ManageUsersService manageUsersService;
 
+	/**
+	 * 다른서비스로 부터 key를 받아옴
+	 * @param parkId
+	 * @return
+	 */
+	@GetMapping("/users/parks/{parkId}")
+	public ApiResponse searchPark(@PathVariable String parkId) {
+		return manageUsersService.searchParkByKey(parkId);
+	}
+	
 //	@RequestMapping("/articles")
 //	@ResponseBody
 	@GetMapping("/users/200") // owe to Jackson
