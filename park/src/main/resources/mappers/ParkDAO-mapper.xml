@@ -3,6 +3,17 @@
 	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="parkDAO">
+
+	<resultMap type="kr.re.kitri.park.model.Park"
+				id="parkMap">
+		<id property="parkId" column="park_id" javaType="String"/>
+		<result property="parkId" column="park_id" javaType="String"/>
+		<result property="name" column="name" javaType="String"/>
+		<result property="alias" column="alias" javaType="String"/>
+		<result property="state" column="state" javaType="String"/>
+		<result property="country" column="country" javaType="String"/>
+	</resultMap>
+	
 	<insert id="insertPark" parameterType="kr.re.kitri.park.model.Park">
 		INSERT INTO park(park_id, name, alias, city, state, country)
 		VALUES(#{parkId}, #{name}, #{alias}, #{city}, #{state}, #{country});
@@ -14,6 +25,13 @@
 		SELECT park_id AS parkId, name, alias, city, state, country
 		FROM park
 		WHERE park_id = #{parkId}
+	</select>
+	
+	<select id="selectParks"
+			resultMap="parkMap">
+		SELECT park_id AS parkId, name, alias, city, state, country
+		FROM park
+		LIMIT 0, 10
 	</select>
 	
 </mapper>
