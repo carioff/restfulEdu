@@ -63,3 +63,14 @@ http://api.abc.com/categories/{categoryId}/books/{bookId}
 GET /users GET /users?role=admin
 GET /users?pageSize=25&pageStartIndex=50
 
+### > 보안 - 인증과 권한
+
+#### > 인증정보를미리설정 ▪ getInterceptors메소드사용
+template = new RestTemplate(); 
+String credentials = Base64.getEncoder().encodeToString((username + ":" + password).getBytes()); template.getInterceptors().add((request, body, execution) -> {    
+	request.getHeaders().add("Authorization", "Basic " + credentials);    
+	return execution.execute(request, body); 
+});
+
+#### > 특정 엔드 포인트에 보안 적용
+

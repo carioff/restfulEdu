@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -53,6 +54,7 @@ public class HomeController {
 	 * @return
 	 */
 	@GetMapping("parks/{parkId}") // @RequestBody
+	@PreAuthorize("hasRole('ADMIN')")//annotation방식-컨트롤러메소드에추가 
 	// public Park searchPark(@PathVariable String parkId) {
 	public ApiResponse searchPark(@PathVariable String parkId) {
 		Park park = parkService.searchParkByParkKey(parkId);
