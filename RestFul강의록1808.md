@@ -16,5 +16,8 @@
 ## Resource Identifier-URI
 ## Representation 
 - 서버가 보내준 것은 Resource가 아니라 Representation
+- content negotiation, 일반적으로 proactive negotiation에 의해 서버가 선택 
+- 적절한 Representation이 선택되지 않으면 406 Error
+
 
 
