@@ -18,6 +18,7 @@
 - 서버가 보내준 것은 Resource가 아니라 Representation
 - content negotiation, 일반적으로 proactive negotiation에 의해 서버가 선택 
 - 적절한 Representation이 선택되지 않으면 406 Error
+- 어떤 리소스의 특정 시점의 상태를 반영하고 있는 정보 = data + metadata
 
 
 
