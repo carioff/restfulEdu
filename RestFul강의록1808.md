@@ -20,5 +20,13 @@
 - 적절한 Representation이 선택되지 않으면 406 Error
 - 어떤 리소스의 특정 시점의 상태를 반영하고 있는 정보 = data + metadata
 
+## RESTful 문서화
+- 서비스 entry point
+- 각 리소스에 대한 경로
+- 각 리소스에 대한 HTTP 메서드 - GET, POST, PUT, DELETE
+- 파라미터 목록
+- 요청과 응답에 대한 양식
+
+
 
 
