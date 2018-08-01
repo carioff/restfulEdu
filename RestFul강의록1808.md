@@ -10,5 +10,5 @@
 - Resource Representations
 - Self-Descriptive Message
 - HATOEAS(Hypermedia As The Engine Of Application State)
- * HTTP 응답에 다음 Action이나 관계되는 리소스에 대한 HTTP를 
+ HTTP 응답에 다음 Action이나 관계되는 리소스에 대한 HTTP를  
 
