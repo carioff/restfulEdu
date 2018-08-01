@@ -1,5 +1,5 @@
-REST원칙
-확장성 있는 웹 서비스를 위한 소프트웨어 아키텍처 
+# REST원칙
+## 확장성 있는 웹 서비스를 위한 소프트웨어 아키텍처 
 1. Client-Server
 2. Stateless
 3. Cacheable
