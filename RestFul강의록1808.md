@@ -6,3 +6,5 @@
 4. Layered system
 5. Uniform interface - uri에 의해 식별되어 짐, 데이터 구조는 강제하지 않음(json or xml)
 6. Code on demand(ptional)
+---
+## Layered System
