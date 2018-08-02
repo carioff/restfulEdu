@@ -1,4 +1,4 @@
-# REST원칙
+# REST원칙 180801
 ## 확장성 있는 웹 서비스를 위한 소프트웨어 아키텍처 
 ### 1. Client-Server
 ### 2. Stateless
@@ -27,6 +27,12 @@
 - 파라미터 목록
 - 요청과 응답에 대한 양식
 
+# 180802
+## 스프링 5.0 변화
+### 비동기 지원을 위해 
+- For non blocking Netty, Servlet 3.1
+- Spring MVC -> WebFlux 
+- Data Reactive Repository(Mongo, Redis, Cassandra)
 
 
 
