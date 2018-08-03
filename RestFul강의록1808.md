@@ -51,3 +51,6 @@
 - Hazelcast 분산캐시
 - Jcache
 
+## 빌드
+- 개발/빌드 respository는 다르다 -> 처음 maven install시 target에 jar파일 생성
+
