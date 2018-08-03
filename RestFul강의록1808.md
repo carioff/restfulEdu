@@ -49,3 +49,5 @@
 - Redis 세션관리
 - Ehcache 로컬캐시
 - Hazelcast 분산캐시
+- Jcache
+
