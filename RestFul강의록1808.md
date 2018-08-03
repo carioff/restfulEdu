@@ -37,4 +37,7 @@
 ## 스프링 프레임워크
 - IoC Callback을 하려면 Container가 객체의 Life-Cycle을 관리
 
+# 180803
+## 예외처리
+- 기본적으로 Controller에서 모아서 
 
